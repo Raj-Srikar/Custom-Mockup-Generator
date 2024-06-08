@@ -50,20 +50,20 @@ function populateImages(images) {
                   " ",
                   "-"
                 )}" name="image" value="${images[c]}" required>
-                <img src="${"/custom-mockups/" + images[c]}" class="image-radio">
+                <img src="${"./custom-mockups/" + images[c]}" class="image-radio">
             </label>`;
   }
   rg.innerHTML = html;
 }
 
-fetch("/colors.json")
+fetch("./colors.json")
   .then((response) => response.json())
   .then((data) => {
     allColors = data;
     populateColors(data);
   });
 
-fetch("/custom-mockups/mockups.json")
+fetch("./custom-mockups/mockups.json")
   .then((response) => response.json())
   .then((data) => {
     populateImages(data);
@@ -121,7 +121,7 @@ function ppReady(e) {
       request.open(
         "GET",
         window.location.origin +
-          "/custom-mockups/" +
+          "./custom-mockups/" +
           myData.image.split(".")[0] +
           ".psd",
         true
