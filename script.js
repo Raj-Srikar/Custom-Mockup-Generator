@@ -120,8 +120,8 @@ function ppReady(e) {
       var request = new XMLHttpRequest();
       request.open(
         "GET",
-        window.location.origin +
-          "./custom-mockups/" +
+        window.location.href +
+          "/custom-mockups/" +
           myData.image.split(".")[0] +
           ".psd",
         true
