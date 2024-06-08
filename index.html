@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup Generator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <h1>Mockup Generator By DRS</h1>
+  <form onsubmit="event.preventDefault();formSubmit()">
+    <h2 style="margin-top: 0;">Design:</h2><input id="design" type="file" name="design"
+      accept="image/png, image/gif, image/jpeg" required>
+    <main>
+      <section class="section">
+        <h2>Select an image:</h2>
+        <div class="radio-group image-rg">
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Select a color:</h2>
+        <div class="radio-group color-rg"></div>
+      </section>
+    </main>
+    <div>
+      <input type="submit" class="generate-button" value="Generate">
+      <div>
+        <label for="xOff">X-Offset: </label><input type="number" name="xOff" id="xOff">
+        <label for="yOff">Y-Offset: </label><input type="number" name="yOff" id="yOff">
+        <label for="scale">Scale(%): </label><input type="number" name="scale" id="scale">
+        <button onclick="this.parentElement.children[1].value='';this.parentElement.children[3].value='';"
+          type="button">Reset</button>
+      </div>
+    </div>
+  </form>
+
+  <iframe id="photopea" src="https://www.photopea.com" style="width:800px; height:500px; display: none;"
+    onload="iframeLoaded(this)"></iframe>
+  <a title="Click to Download"><img style="display: none;" class="bottom-image"></a>
+
+  <div id="generating">
+    <h1>Generating....</h1>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
