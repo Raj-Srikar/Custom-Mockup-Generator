@@ -318,7 +318,7 @@ function ppReady(e) {
                                     desc.putObject( charIDToTypeID('T   '), stringIDToTypeID('solidColorLayer'), fillDesc );
                                     executeAction( charIDToTypeID('setd'), desc, DialogModes.NO );
                                 }
-                                app.activeDocument.activeLayer = app.activeDocument.layers[1].layers.getByName("Shirt Color");
+                                app.activeDocument.activeLayer = app.activeDocument.layers[1].layers.getByName("Product Color");
                                 var sColor =  new SolidColor;
                                 sColor.rgb.hexValue = '${hex}';
                                 setColorOfFillLayer( sColor );

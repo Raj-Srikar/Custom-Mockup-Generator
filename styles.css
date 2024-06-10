@@ -208,11 +208,14 @@ div:has(#generate-button)>*:not(#generate-button) {
     display: inline-block;
     position: absolute;
     width: max-content;
-    left: 220px;
+    left: 13vw;
     top: 0;
     bottom: 0;
     margin: auto;
     height: fit-content;
+    padding: 5px 10px 5px 5px;
+    border: 1px solid;
+    border-radius: 6px;
 }
 
 div:has(#generate-button) label {
@@ -225,10 +228,10 @@ input[type="number"] {
 }
 
 #reset {
-    font-size: 14px;
+    font-size: 13px;
     width: 65px;
     background-color: black;
-    height: 30px;
+    height: 25px;
     padding: 0;
     margin-left: 10px;
 }
